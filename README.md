@@ -20,8 +20,6 @@ I learned so much while making this template, if you use it, please let me know.
 
 You can add more things to make it even cooler! The comments in the code will help you navigate through it. Have a nice day! :D
 
-So to use my app you need to download some dependencies and clone my repository. As I am facing problem to find a alternative other than nodemon to do web hosting pls share me a way it would really help.
-
 <h3 align="center">Languages and services used :</h3>
 <p align="center">
 <a href="https://github.com/achaljhawar/Tyniurl/search?l=CSS"><img alt="css" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"></a>
