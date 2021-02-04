@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>URL Database</title>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+  </head>
+  <body>
+    <div style="text-align: right; margin: 20px;">
+   	<button type="button" class="btn btn-success" onclick="window.location.replace('/')">Take me back</button>
+  </div>
+	<center>
+		<table class="styled-table">
+			<thead>
+					<tr>
+							<th class="switch" >
+									Full URL
+							</th>
+							<th class="switch" >
+									Short URL
+							</th>
+							<th class="switch" >
+									Clicks
+							</th>
+					</tr>
+			</thead>
+				<tbody>
+						<% shortUrls.forEach(shortUrl => { %>
+								<tr class="switch">
+									<td><a href="<%= shortUrl.full %>"><%= shortUrl.full %></a></td>
+									<td><a href="<%= shortUrl.short %>"><%= shortUrl.short %></a></td>
+									<td class="switch"><%= shortUrl.clicks %></td>
+								</tr>
+						<% }) %>
+				</tbody>
+			</table>
+		</center>
+  </body>
+</html>
