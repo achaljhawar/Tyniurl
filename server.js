@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const ShortUrl = require('./models/shortUrl')
 const app = express()
 const validUrl =  require('valid-url')
-mongoose.connect('mongodb+srv://admin:1234@cluster0.crs8m.mongodb.net/Tyni?retryWrites=true&w=majority',{
+mongoose.connect('Add your mongodb api key here',{
     useNewUrlParser: true, useUnifiedTopology: true
 })
 
