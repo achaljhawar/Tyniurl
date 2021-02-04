@@ -1,10 +1,18 @@
 <h1 align="center">Tyniurl</h1>
 <p align="center">
+ <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/achaljhawar/Tyniurl?style=for-the-badge">
+ <a href="https://github.com/achaljhawar/Tyniurl/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/achaljhawar/Tyniurl?style=for-the-badge"></a>
+ <a href="https://github.com/achaljhawar/Tyniurl/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/achaljhawar/Tyniurl?style=for-the-badge"></a>
+ <a href="https://github.com/achaljhawar/Tyniurl/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/achaljhawar/Tyniurl?style=for-the-badge"></a>
+ <a href="https://github.com/achaljhawar/Tyniurl/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/achaljhawar/Tyniurl?style=for-the-badge"></a>
+ <br/>
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/achaljhawar/Tyniurl?style=for-the-badge">
+  <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/achaljhawar/Tyniurl?style=for-the-badge">
 </p>
 
 <h3 align="center">A hassle free URL shortner.</h3>
 
-This is a simple responsive URL shortner that I made for Halolegion inductions. You can use it and make it yours by changing things and colors to your style and liking! I made it with a lot of hard work, love and of course with code :) I'm not a professional coder, but i tried my best to make it look cool and yet still keep it simple. While working with JS i got many errors, but thanks to Youtube Tutorials for helping me fix them. Also thanks to <a href="htttps://utkarsh.co">Utkarsh</a> for some hosting support :D. And pls view the properly indented code at https://repl.it/@AchalJhawar/Tyni
+This is a simple responsive URL shortner that I made for Halolegion inductions. You can use it and make it yours by changing things and colors to your style and liking! I made it with a lot of hard work, love and of course with code :) I'm not a professional coder, but i tried my best to make it look cool and yet still keep it simple. While working with JS i got many errors, but thanks to Youtube Tutorials for helping me fix them. Also thanks to <a href="htttps://utkarsh.co">Utkarsh</a> for some hosting support :D.
 
 Mistakes are proof that we are trying!
 
@@ -44,7 +52,7 @@ You can add more things to make it even cooler! The comments in the code will he
 </p>
 <h3 align="center">Github Star stats:</h3>
 <img src="https://starchart.cc/achaljhawar/Tyniurl.svg" align="center">
-<h5 align="center">if you see this blank cuz no one has starred the repo yet.And it takes some time to update chart.</h3>
+<h4 align="center">if you see this blank cuz no one has starred the repo yet.And it takes some time to update chart.</h4>
 <h3 align="center">If you find some bugs or have some suggestions fell free add your issue.</h3>
 <h3 align="center">Thank you.</h3> 
 <h3 align="center">Made for HALO</h3>
