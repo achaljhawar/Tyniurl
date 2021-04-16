@@ -12,7 +12,7 @@
 
 <h3 align="center">A hassle free URL shortner.</h3>
 
-This is a simple responsive URL shortner that I made for Halolegion inductions. You can use it and make it yours by changing things and colors to your style and liking! I made it with a lot of hard work, love and of course with code :) I'm not a professional coder, but i tried my best to make it look cool and yet still keep it simple. While working with JS i got many errors, but thanks to Youtube Tutorials for helping me fix them. Also thanks to <a href="htttps://utkarsh.co">Utkarsh</a> for some hosting support :D.
+This is a simple responsive URL shortner that I made for Halolegion inductions. I made it with a lot of hard work, love and of course with code :) I'm not a professional coder, but i tried my best to make it look cool and yet still keep it simple. While working with JS i got many errors, but thanks to Youtube Tutorials for helping me fix them. Also thanks to <a href="htttps://utkarsh.co">Utkarsh</a> for some hosting support :D.
 
 Mistakes are proof that we are trying!
 
