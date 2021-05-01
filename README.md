@@ -50,9 +50,6 @@ You can add more things to make it even cooler! The comments in the code will he
 <a href="https://twitter.com/AchalJhawar"><img alt="Twitter" src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white"></a>
 <a href=""><img alt="Reddit" src="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white"></a>
 </p>
-<h3 align="center">Github Star stats:</h3>
-<img src="https://starchart.cc/achaljhawar/Tyniurl.svg" align="center">
-<h4 align="center">if you see this blank cuz no one has starred the repo yet.And it takes some time to update chart.</h4>
 <h3 align="center">If you find some bugs or have some suggestions fell free add your issue.</h3>
 <h3 align="center">Thank you.</h3> 
 <h3 align="center">Made for HALO</h3>
