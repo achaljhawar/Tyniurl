@@ -16,7 +16,7 @@
     "mongoose": "^5.12.9",
     "newrelic": "^7.4.0",
     "sass": "^1.32.13",
-    "sass-loader": "^11.1.0",
+    "sass-loader": "^11.1.1",
     "shortid": "^2.2.16",
     "stylelint": "^13.13.1",
     "valid-url": "^1.0.9"
