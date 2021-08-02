@@ -15,7 +15,7 @@
     "express": "^4.17.1",
     "mongoose": "^5.13.5",
     "newrelic": "^7.5.0",
-    "sass": "^1.37.0",
+    "sass": "^1.37.1",
     "sass-loader": "^12.1.0",
     "shortid": "^2.2.16",
     "stylelint": "^13.13.1",
