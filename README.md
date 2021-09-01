@@ -1,4 +1,4 @@
-<h1 align="center"><i>Tyniurl</i></h1>
+<h1 align="center"><b>Tyniurl</b></h1>
 <p align="center">
  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/achaljhawar/Tyniurl?style=for-the-badge">
  <a href="https://github.com/achaljhawar/Tyniurl/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/achaljhawar/Tyniurl?style=for-the-badge"></a>
