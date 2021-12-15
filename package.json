@@ -13,7 +13,7 @@
     "config": "^3.3.6",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
-    "mongoose": "^6.0.13",
+    "mongoose": "^6.1.2",
     "newrelic": "^8.2.0",
     "sass": "^1.42.1",
     "sass-loader": "^12.1.0",
