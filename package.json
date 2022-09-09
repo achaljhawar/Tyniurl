@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "clipboard-polyfill": "^3.0.3",
-    "config": "^3.3.6",
+    "config": "^3.3.8",
     "ejs": "^3.1.8",
     "express": "^4.17.1",
     "mongoose": "^6.1.3",
