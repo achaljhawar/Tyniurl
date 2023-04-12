@@ -9,7 +9,7 @@
   "author": "Achal Jhawar",
   "license": "ISC",
   "dependencies": {
-    "clipboard-polyfill": "^3.0.3",
+    "clipboard-polyfill": "^4.0.0",
     "config": "^3.3.6",
     "ejs": "^3.1.8",
     "express": "^4.17.1",
