@@ -44,8 +44,8 @@ window.onload = ()=>{
 	url = unescape(document.location.search.slice(1, document.location.search.length))
 	if(isJson(url)){
 		url = JSON.parse(url)
-		if("url" in url && "short" in url){
-			document.querySelector("h5").innerHTML = `<a href="${url.url}">${url.url}</a>, Shortened at 👉 <a id="p1" href="https://tyni.achaljhawar.repl.co/${url.short}">https://tyni.achaljhawar.repl.co/${url.short}</a>         <button onclick="copyToClipboard('#p1')" class="btn btn-success">Copy Short Url</button>`
+		if("url" in url && "short" in url){ 
+			document.querySelector("h5").innerHTML = `<a href="${url.url}">${url.url}</a>, Shortened at 👉 <a id="p1" href="https://tyniurl.onrender.com/${url.short}">https://tyniurl.onrender.com/${url.short}</a>         <button onclick="copyToClipboard('#p1')" class="btn btn-success">Copy Short Url</button>`
 			document.getElementById('fullUrl').value = url.url
 			document.getElementById('successalert').innerHTML = `<div id="success" class="alert alert-success fade show"><strong>✅ Success!</strong> Your url has been generated<button id="close" type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>`
 			document.getElementById('close').onclick = close;
