@@ -1,8 +1,17 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const ShortUrl = require('./models/shortUrl')
-const app = express()
+const session = require('express-session')
+function isLoggedIn(req,res,next) {
+    req.user ? next() : res.redirect("/login")
+}
 const validUrl =  require('valid-url')
+require('./auth')
+const passport = require('passport')
+const app = express()
+app.use(session({ secret: process.env.SECRET}));
+app.use(passport.initialize());
+app.use(passport.session());
 mongoose.connect(process.env.MONGO_URI,{
     useNewUrlParser: true, useUnifiedTopology: true
 })
@@ -11,17 +20,31 @@ app.set('view engine','ejs')
 app.use(express.urlencoded({ extended: false }))
 app.use(express.static('views'))
 
-app.get('/', async (req, res) => {
-    const shortUrls = await ShortUrl.find()
-    res.render('index', { shortUrls: shortUrls })
+app.get('/login', (req, res) => {
+    res.render('login')
 })
-
-app.get('/url', async (req, res) => {
+app.get('/login/auth/google', 
+    passport.authenticate('google', { scope: ['profile', 'email'] })
+)
+app.get('/login/google/callback', 
+    passport.authenticate('google', {
+        successRedirect: '/',
+        failureRedirect: '/login/auth/failure'
+     })
+)
+app.get('/login/auth/failure', (req,res) => {
+    res.send('Failed to authenticate..')
+})
+app.get('/',isLoggedIn , async (req,res ) => {
+    const shortUrls = await ShortUrl.find()
+    res.render('index', { shortUrls: shortUrls });
+})
+app.get('/url',async (req, res) => {
     const shortUrls = await ShortUrl.find()
     res.render('urldatabase', { shortUrls: shortUrls })
 })
 
-app.post('/shortUrls', async (req, res) =>{
+app.post('/shortUrls', isLoggedIn ,async (req, res) =>{
 	try{
 		if(validUrl.isUri(req.body.fullUrl)){
 			let url = await ShortUrl.find({ full: req.body.fullUrl })
