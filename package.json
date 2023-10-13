@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "devStart": "nodemon server.js"
+    "devStart": "bun --hot server.js"
   },
   "author": "Achal Jhawar",
   "license": "ISC",
   "dependencies": {
     "clipboard-polyfill": "^4.0.1",
     "config": "^3.3.6",
+    "dotenv": "^16.3.1",
     "ejs": "^3.1.8",
     "express": "^4.17.1",
     "mongoose": "^7.3.2",
@@ -20,8 +21,5 @@
     "shortid": "^2.2.16",
     "stylelint": "^15.10.3",
     "valid-url": "^1.0.9"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.21"
   }
 }
