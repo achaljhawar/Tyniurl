@@ -51,7 +51,15 @@ app.post('/shortUrls', async (req, res) =>{
             .select('*')
             .eq('fullurl',req.body.fullUrl)
 			if(urls.length == 0) {
-				let newurl = generateString(8)
+				let b = 1;
+                while (b == 0){
+                    let newurl = generateString(8)
+                    let { data : urls, error} = await supabase
+                    .from('urls')
+                    .select('*')
+                    .eq('shortid',newurl)
+                    b = urls.length;
+                }
                 const { data, error } = await supabase
                 .from('urls')
                 .insert([
