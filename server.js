@@ -1,6 +1,7 @@
 const express = require('express')
 const session = require('express-session')
 const { createClient } = require('@supabase/supabase-js')
+const { generateString } = require('./functions.js')
 function isLoggedIn(req,res,next) {
     req.user ? next() : res.redirect("/login")
 }
