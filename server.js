@@ -20,26 +20,27 @@ app.get('/', async (req, res) => {
 app.post('/shortUrls', async (req, res) =>{
 	try{
 		if(validUrl.isUri(req.body.fullUrl)){
-            let { data: urls, error } = await supabase
-            .from('urls')
-            .select('*')
-            .eq('fullurl',req.body.fullUrl)
+      let { data: urls, error } = await supabase
+      .from('urls')
+      .select('*')
+      .eq('fullurl',req.body.fullUrl)
 			if(urls.length == 0) {
+        let newurl="";
 				let b = 1;
-                while (b == 0){
-                    let newurl = generateString(8)
-                    let { data : urls, error} = await supabase
-                    .from('urls')
-                    .select('*')
-                    .eq('shortid',newurl)
-                    b = urls.length;
-                }
-                const { data, error } = await supabase
-                .from('urls')
-                .insert([
-                  { fullurl: req.body.fullUrl, shortid: newurl },
-                ])
-                .select()
+        while (b != 0){
+          newurl = generateString(8)
+          let { data : urls, error} = await supabase
+          .from('urls')
+          .select('*')
+          .eq('shortid',newurl)
+          b = urls.length;
+        }
+        const { data, error } = await supabase
+        .from('urls')
+        .insert([
+          { fullurl: req.body.fullUrl, shortid: newurl },
+        ])
+        .select()
 				res.redirect(`/?{"url":"${req.body.fullUrl}","short":"${newurl}"}`);
 			}else{
 				res.redirect(`/?{"url":"${urls[0]['fullurl']}","short":"${urls[0]['shortid']}"}`);
@@ -57,14 +58,14 @@ app.get('/404', (req, res) => {
 })
 
 app.get('/:shortUrl', async (req, res) => {
-    let { data: urls, error } = await supabase
-    .from('urls')
-    .select('*')
-    .eq('shortid',req.params.shortUrl)
-    const fullurl = urls[0]['fullurl']
+  let { data: urls, error } = await supabase
+  .from('urls')
+  .select('*')
+  .eq('shortid',req.params.shortUrl)
+  const fullurl = urls[0]['fullurl']
 
-    if (fullurl.length == 0 ) return res.redirect('/404')
-    res.redirect(fullurl)
+  if (fullurl.length == 0 ) return res.redirect('/404')
+  res.redirect(fullurl)
     
 })
 
