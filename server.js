@@ -62,10 +62,9 @@ app.get('/:shortUrl', async (req, res) => {
   .from('urls')
   .select('*')
   .eq('shortid',req.params.shortUrl)
-  const fullurl = urls[0]['fullurl']
 
-  if (fullurl.length == 0 ) return res.redirect('/404')
-  res.redirect(fullurl)
+  if (urls.length == 0 ) return res.redirect('/404')
+  res.redirect(urls[0]['fullurl'])
     
 })
 
