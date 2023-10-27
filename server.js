@@ -18,38 +18,61 @@ app.get('/', async (req, res) => {
 })
 
 app.post('/shortUrls', async (req, res) =>{
-	try{
-		if(validUrl.isUri(req.body.fullUrl)){
-      let { data: urls, error } = await supabase
-      .from('urls')
-      .select('*')
-      .eq('fullurl',req.body.fullUrl)
-			if(urls.length == 0) {
-        let newurl="";
-				let b = 1;
-        while (b != 0){
-          newurl = generateString(8)
-          let { data : urls, error} = await supabase
-          .from('urls')
-          .select('*')
-          .eq('shortid',newurl)
-          b = urls.length;
-        }
-        const { data, error } = await supabase
+  if (req.body.customshort.trim().length === 0){
+    try{
+      if(validUrl.isUri(req.body.fullUrl)){
+        let { data: urls, error } = await supabase
         .from('urls')
-        .insert([
-          { fullurl: req.body.fullUrl, shortid: newurl },
-        ])
-        .select()
-				res.redirect(`/?{"url":"${req.body.fullUrl}","short":"${newurl}"}`);
-			}else{
-				res.redirect(`/?{"url":"${urls[0]['fullurl']}","short":"${urls[0]['shortid']}"}`);
-			}
-		}else{
-			res.redirect('/?{"error":"Invalid Url"}')
-		}
-  }catch (err){
-    if(err) throw err;
+        .select('*')
+        .eq('fullurl',req.body.fullUrl)
+        if(urls.length == 0) {
+          let newurl="";
+          let b = 1;
+          while (b != 0){
+            newurl = generateString(8)
+            let { data : urls, error} = await supabase
+            .from('urls')
+            .select('*')
+            .eq('shortid',newurl)
+            b = urls.length;
+          }
+          const { data, error } = await supabase
+          .from('urls')
+          .insert([
+            { fullurl: req.body.fullUrl, shortid: newurl },
+          ])
+          .select()
+          res.redirect(`/?{"url":"${req.body.fullUrl}","short":"${newurl}"}`);
+        }else{
+          res.redirect(`/?{"url":"${urls[0]['fullurl']}","short":"${urls[0]['shortid']}"}`);
+        }
+      }else{
+        res.redirect('/?{"error":"Invalid Url"}')
+      }
+    }catch (err){
+      if(err) throw err;
+    }
+  } else {
+    try {
+      if(validUrl.isUri(req.body.fullUrl)){
+        let { data: urls, error } = await supabase
+        .from('urls')
+        .select('*')
+        .eq('shortid',req.body.customshort.trim())
+        if (urls.length === 0){
+          let {data, error} = await supabase
+          .from('urls')
+          .insert([
+            { fullurl: req.body.fullUrl, shortid: req.body.customshort.trim() },
+          ])
+          res.redirect(`/?{"url":"${req.body.fullUrl}","short":"${req.body.customshort.trim()}"}`);
+        }
+      } else {
+        res.redirect('/?{"error":"Invalid Url"}')
+      }
+    } catch (err){
+      if(err) throw err;
+    }
   }
 })
 
