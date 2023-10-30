@@ -66,6 +66,8 @@ app.post('/shortUrls', async (req, res) =>{
             { fullurl: req.body.fullUrl, shortid: req.body.customshort.trim() },
           ])
           res.redirect(`/?{"url":"${req.body.fullUrl}","short":"${req.body.customshort.trim()}"}`);
+        } else {
+          res.redirect('/?{"error":"Invalid shortid"}')
         }
       } else {
         res.redirect('/?{"error":"Invalid Url"}')
