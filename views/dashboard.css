@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*{
+	font-family: 'Roboto', sans-serif;
+}
+.styled-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.styled-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #ffffff;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.styled-table tbody tr a.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+
+.styled-table tbody tr:hover{
+	height: 100px;
+  color: #009879;
+	width: 130%;
+  font-weight: bold;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table tbody tr:hover a{
+  color: #009879;
+}
+
+
+.qrbox {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-row-gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  height: 300px;
+  width: 300px;
+  padding: 1rem;
+  border: 2px solid #bada55;
+  border-radius: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ml10 {
+  position: relative;
+  font-weight: 50;
+  font-size: 3em;
+}
+
+.ml10 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+  font-weight: 50;
+
+}
+
+.ml10 .letter {
+  display: inline-block;
+  line-height: 1em;
+  transform-origin: 0 0;
+  font-weight: 50;
+
+}
+
+ .dumdum__links {
+	 display: flex;
+	 justify-content: space-between;
+	 align-items: center;
+	 width: 70%;
+}
+ .social-link--linkedin {
+	 color: #2d76b0;
+}
+ .social-link--github {
+	 color: #000;
+}
+ .social-link--instagram {
+	 color: #9a2970;
+}
+ .social-link--dribbble {
+	 color: #b53561;
+}
+ .social-link .social-svg {
+	 width: 4.8rem;
+	 height: 4.8rem;
+}
+ .social-link .social-svg .social-group__icon {
+	 fill: #191308;
+	 transition: all 0.2s;
+}
+ .social-link .social-svg .social-group__inner-circle {
+	 fill: transparent;
+	 transition: all 0.2s;
+}
+ .social-link .social-svg .social-group__outline {
+	 stroke: #191308;
+	 transform-origin: 50% 50%;
+	 transition: all 0.2s;
+}
+ .social-link .social-svg:hover .social-group__icon, .social-link .social-svg:active .social-group__icon, .social-link .social-svg:focus .social-group__icon {
+	 fill: #fffbfa;
+	 transition: all 0.45s;
+}
+ .social-link .social-svg:hover .social-group__inner-circle,.social-link .social-svg:active .social-group__inner-circle, .social-link .social-svg:focus .social-group__inner-circle {
+	 fill: currentColor;
+	 transition: all 0.45s;
+}
+ .social-link .social-svg:hover .social-group__inner-circle--instagram, .social-link .social-svg:active .social-group__inner-circle--instagram, .social-link .social-svg:focus .social-group__inner-circle--instagram {
+	 fill: url(#simpleInsta) !important;
+}
+ .social-link .social-svg:hover .social-group__outline, .social-link .social-svg:active .social-group__outline, .social-link .social-svg:focus .social-group__outline {
+	 stroke: currentColor;
+	 transform: scale(1.1);
+	 transition: all 0.45s;
+}

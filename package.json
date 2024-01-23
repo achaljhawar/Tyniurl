@@ -1,10 +1,10 @@
 {
   "name": "tyni",
   "version": "1.0.0",
-  "description": "",
+  "description": "<h1 align=\"center\"><b>Tyniurl</b></h1>\r <p align=\"center\">\r  <img alt=\"GitHub language count\" src=\"https://img.shields.io/github/languages/count/achaljhawar/Tyniurl?style=for-the-badge\">\r  <a href=\"https://github.com/achaljhawar/Tyniurl/issues\"><img alt=\"GitHub issues\" src=\"https://img.shields.io/github/issues/achaljhawar/Tyniurl?style=for-the-badge\"></a>\r  <a href=\"https://github.com/achaljhawar/Tyniurl/network\"><img alt=\"GitHub forks\" src=\"https://img.shields.io/github/forks/achaljhawar/Tyniurl?style=for-the-badge\"></a>\r  <a href=\"https://github.com/achaljhawar/Tyniurl/blob/master/LICENSE\"><img alt=\"GitHub license\" src=\"https://img.shields.io/github/license/achaljhawar/Tyniurl?style=for-the-badge\"></a>\r  <a href=\"https://github.com/achaljhawar/Tyniurl/stargazers\"><img alt=\"GitHub stars\" src=\"https://img.shields.io/github/stars/achaljhawar/Tyniurl?style=for-the-badge\"></a>\r  <br/>\r   <img alt=\"GitHub top language\" src=\"https://img.shields.io/github/languages/top/achaljhawar/Tyniurl?style=for-the-badge\">\r   <img alt=\"GitHub release (latest by date)\" src=\"https://img.shields.io/github/v/release/achaljhawar/Tyniurl?style=for-the-badge\">\r </p>",
   "main": "index.js",
   "scripts": {
-    "devStart": "bun --hot server.js"
+    "devStart": "nodemon server.js"
   },
   "author": "Achal Jhawar",
   "license": "ISC",
@@ -15,7 +15,10 @@
     "dotenv": "^16.3.1",
     "ejs": "^3.1.8",
     "express": "^4.17.1",
+    "express-session": "^1.17.3",
     "newrelic": "^11.1.0",
+    "passport": "^0.6.0",
+    "passport-google-oauth2": "^0.2.0",
     "sass": "^1.45.1",
     "sass-loader": "^13.0.0",
     "shortid": "^2.2.16",
@@ -24,5 +27,13 @@
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/achaljhawar/tyni-2.0.git"
+  },
+  "bugs": {
+    "url": "https://github.com/achaljhawar/tyni-2.0/issues"
+  },
+  "homepage": "https://github.com/achaljhawar/tyni-2.0#readme"
 }
