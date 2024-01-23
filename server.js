@@ -134,7 +134,7 @@ app.post('/shortUrls', async (req, res) =>{
             .from('urls_acm')
             .select('*')
             .eq('shortid',newurl)
-            b = urls.length;
+            b = urls_acm.length;
           }
           const { data, error } = await supabase
           .from('urls_acm')
