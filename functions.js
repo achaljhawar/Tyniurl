@@ -10,3 +10,4 @@ function generateString(length) {
   }
   
 module.exports = { generateString }
+

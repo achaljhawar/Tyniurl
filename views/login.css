@@ -1,0 +1,26 @@
+#googleButton {
+    background: #4285F4;
+    border-radius: 1px;
+    display: inline-block;
+    padding: 1px;
+    text-align: center;
+    width: 240px;
+  }
+  #googleButton:hover {
+    cursor: pointer;
+  }
+  #googleButton span.icon {
+    background: url('https://flixable.com/images/google.svg') white center center no-repeat;
+    display: block;
+    float: left;
+    height: 18px;
+    padding: 15px;
+    width: 18px;
+  }
+  #googleButton span.text {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 48px;
+  }
