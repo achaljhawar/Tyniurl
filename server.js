@@ -1,6 +1,7 @@
 const express = require('express')
 const session = require('express-session')
 const { createClient } = require('@supabase/supabase-js')
+const nodemailer = require('nodemailer')
 const { generateString } = require('./functions.js')
 function isLoggedIn(req,res,next) {
     req.user ? next() : res.redirect("/login")
@@ -18,7 +19,7 @@ app.use(passport.session());
 app.set('view engine','ejs')
 app.use(express.urlencoded({ extended: false }))
 app.use(express.static('views'))
-
+app.use(express.json())
 const supabaseUrl = process.env.supabaseUrl
 const supabaseKey = process.env.supabaseKey
 const supabase = createClient(supabaseUrl, supabaseKey)
@@ -213,6 +214,41 @@ app.get('/:shortUrl', async (req, res) => {
     res.redirect(urls_acm[0]['fullurl'])
   }
 })
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  host: "smtp.google.com",
+  port: 587,
+  secure: true,
+  auth: {
+    user: process.env.EMAIL,
+    pass: process.env.EMAIL_PASSWORD
+  }
+});
 
+async function sendEmail(emails, shorturl) {
+  try {
+    await transporter.sendMail({
+      from: {
+        name: 'Tyniurl',
+        address: `${process.env.EMAIL}`
+      },
+      to: `${emails}`,
+      subject: "someone shared a url with you",
+      text: `${shorturl}`
+    });
+    console.log("Email sent successfully");
+  } catch (error) {
+    console.error("Error sending email:", error);
+  }
+}
+app.post('/emails', async (req, res) =>{
+  const ok = req.body;
+  const email = ok.email;
+  const emails = ok.emails;
+  const shorturl =ok.shorturl;
+  console.log(ok)
+  sendEmail(emails,shorturl)
+  return res.status(200);
+})
 
 app.listen(process.env.PORT || 3000);
