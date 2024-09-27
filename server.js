@@ -234,7 +234,7 @@ async function sendEmail(emails, shorturl) {
       },
       to: `${emails}`,
       subject: "someone shared a url with you",
-      text: `${shorturl}`
+      text: `http://localhost:3000/${shorturl}`
     });
     console.log("Email sent successfully");
   } catch (error) {
